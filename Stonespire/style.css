@@ -19,6 +19,13 @@ body {
   max-height: 500px;
 }
 
+img {
+    width: 100%;
+    height: 768px;
+    object-fit: cover;
+    object-position: center;
+}
+
 #story-content {
   background-color: #f2f2f2;
   padding: 20px;
