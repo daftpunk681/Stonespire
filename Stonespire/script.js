@@ -148,7 +148,7 @@ function toggleMusic() {
   }
   musicPlaying = !musicPlaying; // Inverse the music playing state
   // Change the button text to reflect the current state
-  toggleMusicButton.textContent = musicPlaying ? "Désactiver la musique" : "Activer la musique";
+  toggleMusicButton.textContent = musicPlaying ? "Musique" : "Musique";
 }
 
 // Event listener for the toggle music button
