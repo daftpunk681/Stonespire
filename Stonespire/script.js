@@ -1,7 +1,7 @@
 // Define the story segments and choices
 const storyData = {
   intro: {
-    content: `<img src="image1.jpg" alt="Description de l'image"><br><br>Qui êtes-vous ?`,
+    content: `<img src="images/image1.jpg" alt="Description de l'image"><br><br>Qui êtes-vous ?`,
     choices: [
       { text: "Un humain voleur", next: "segment1" },
       { text: "Un humain paladin", next: "segmentPaladin" },
