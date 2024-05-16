@@ -154,27 +154,6 @@ function toggleMusic() {
 // Event listener for the toggle music button
 toggleMusicButton.addEventListener('click', toggleMusic);
 
-// Définissez la variable pour suivre si la musique est actuellement en lecture
-let musicPlaying = false;
-
-// Récupérer la référence du bouton de bascule de la musique
-const toggleMusicButton = document.getElementById('toggle-music');
-const backgroundMusic = document.getElementById('background-music');
-
-// Fonction pour basculer la lecture de la musique
-function toggleMusic() {
-    if (musicPlaying) {
-        backgroundMusic.pause(); // Met en pause la musique
-        musicPlaying = false;
-    } else {
-        backgroundMusic.play(); // Joue la musique
-        musicPlaying = true;
-    }
-}
-
-// Ajouter un écouteur d'événements pour le clic sur le bouton de bascule de la musique
-toggleMusicButton.addEventListener('click', toggleMusic);
-
 // Get references to the story content and choices containers
 const storyContent = document.getElementById('story-content');
 const choicesContainer = document.getElementById('choices');
