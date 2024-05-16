@@ -10,7 +10,7 @@ body {
 }
 
 #image-container {
-  text-align: center;
+  text-align: center; /* Center align the images */
   margin-bottom: 20px;
 }
 
