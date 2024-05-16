@@ -1,7 +1,7 @@
 // Define the story segments and choices
 const storyData = {
   intro: {
-    content: `<img src="images/image1.jpg" alt="Description de l'image"><br><br>Qui êtes-vous ?`,
+    content: `<img src="image1.jpg" alt="Description de l'image"><br><br>Qui êtes-vous ?`,
     choices: [
       { text: "Un humain voleur", next: "segment1" },
       { text: "Un humain paladin", next: "segmentPaladin" },
@@ -132,98 +132,6 @@ choices: [
     ] 
   }
 };
-segmentTaverneNuit: {
-    content: `<img src="images/imagetavernenuit.jpg" alt="Description de l'image"><br><br>La nuit tombe sur Stonespire et l'atmosphère devient plus sombre.`,
-    choices: [
-      { text: "Vous continuez à attendre", next: "segmentAttenteNuit" },
-      { text: "Vous décidez de partir et de chercher votre compagnon ailleurs", next: "segmentMarchéNuit" },
-    ]
-  },
-  segmentAttenteNuit: {
-    content: `<img src="images/imageattentenuit.jpg" alt="Description de l'image"><br><br>Vous attendez, mais personne ne semble se manifester à la taverne.`,
-    choices: [
-      { text: "Vous décidez d'explorer la ville", next: "segmentRuesSombres" },
-      { text: "Vous restez un peu plus longtemps", next: "mort" },
-    ]
-  },
-  segmentRuesSombres: {
-    content: `<img src="images/imageruessombres.jpg" alt="Description de l'image"><br><br>Vous vous aventurez dans les rues sombres de Stonespire, méfiant de chaque coin d'ombre.`,
-    choices: [
-      { text: "Vous entendez des bruits étranges et décidez de vous en approcher", next: "segmentBruits" },
-      { text: "Vous continuez à chercher votre compagnon", next: "segmentCompagnon" },
-    ]
-  },
-  segmentBruits: {
-    content: `<img src="images/imagebruits.jpg" alt="Description de l'image"><br><br>Vous découvrez un groupe de cultistes en train de réaliser un rituel sombre.`,
-    choices: [
-      { text: "Vous les affrontez", next: "mort" },
-      { text: "Vous vous échappez discrètement", next: "segmentEchappement" },
-    ]
-  },
-  segmentEchappement: {
-    content: `<img src="images/imageechappement.jpg" alt="Description de l'image"><br><br>Vous réussissez à vous échapper sans attirer l'attention des cultistes.`,
-    choices: [
-      { text: "Vous retournez à la taverne pour réfléchir à votre prochain mouvement", next: "segmentTaverneReprise" },
-      { text: "Vous poursuivez votre recherche de votre compagnon", next: "segmentCompagnon" },
-    ]
-  },
-  segmentTaverneReprise: {
-    content: `<img src="images/imagetavernereprise.jpg" alt="Description de l'image"><br><br>Vous retournez à la taverne pour reprendre vos esprits et élaborer un plan.`,
-    choices: [
-      { text: "Vous interrogez le tenancier sur les disparitions récentes", next: "segmentTenancier" },
-      { text: "Vous décidez de vous reposer pour la nuit", next: "segmentRepos" },
-    ]
-  },
- segmentCompagnon: {
-    content: `<img src="images/imagecompagnon.jpg" alt="Description de l'image"><br><br>Vous trouvez votre compagnon dans une ruelle sombre, grièvement blessé.`,
-    choices: [
-      { text: "Vous cherchez de l'aide pour le soigner", next: "segmentAide" },
-      { text: "Vous tentez de le soigner vous-même", next: "segmentSoins" },
-    ]
-  },
-  segmentAide: {
-    content: `<img src="images/imageaide.jpg" alt="Description de l'image"><br><br>Vous cherchez de l'aide dans les rues de Stonespire, désespéré de trouver quelqu'un qui puisse aider votre compagnon.`,
-    choices: [
-      { text: "Vous trouvez un guérisseur itinérant", next: "segmentGuérisseur" },
-      { text: "Vous vous dirigez vers la taverne pour demander de l'aide", next: "segmentTaverneAide" },
-    ]
-  },
-  segmentGuérisseur: {
-    content: `<img src="images/imageguerisseur.jpg" alt="Description de l'image"><br><br>Vous trouvez un guérisseur itinérant dans une ruelle sombre. Il accepte de soigner votre compagnon en échange d'une faveur.`,
-    choices: [
-      { text: "Vous acceptez ses conditions", next: "segmentFaveur" },
-      { text: "Vous refusez et cherchez une autre solution", next: "segmentRefus" },
-    ]
-  },
-  segmentFaveur: {
-    content: `<img src="images/imagefaveur.jpg" alt="Description de l'image"><br><br>Le guérisseur demande que vous voliez un artefact magique pour lui en échange de ses services.`,
-    choices: [
-      { text: "Vous acceptez, désespéré", next: "segmentVol" },
-      { text: "Vous refusez et partez à la recherche d'une autre aide", next: "segmentRefus" },
-    ]
-  },
-  segmentRefus: {
-    content: `<img src="images/imagerefus.jpg" alt="Description de l'image"><br><br>Vous refusez les conditions du guérisseur et cherchez une autre solution pour soigner votre compagnon.`,
-    choices: [
-      { text: "Vous retournez à la taverne pour chercher de l'aide", next: "segmentTaverneAide" },
-      { text: "Vous partez à la recherche d'un autre guérisseur", next: "segmentAutreGuérisseur" },
-    ]
-  },
-  segmentTaverneAide: {
-    content: `<img src="images/imagetaverneaide.jpg" alt="Description de l'image"><br><br>Vous entrez dans la taverne et demandez de l'aide aux habitants, espérant trouver quelqu'un capable de soigner votre compagnon.`,
-    choices: [
-      { text: "Vous trouvez un médecin compatissant", next: "segmentMédecin" },
-      { text: "Personne ne semble capable d'aider", next: "segmentDésespoir" },
-    ]
-  },
-  segmentMédecin: {
-    content: `<img src="images/imagemedecin.jpg" alt="Description de l'image"><br><br>Un médecin compatissant accepte de soigner votre compagnon gratuitement, reconnaissant votre détresse.`,
-    choices: [
-      { text: "Vous remerciez le médecin et restez à ses côtés", next: "segmentGratitude" },
-      { text: "Vous attendez à l'extérieur de la taverne", next: "segmentAttente" },
-    ]
-  },
-
 
 // Get reference to the toggle music button
 const toggleMusicButton = document.getElementById('toggle-music');
