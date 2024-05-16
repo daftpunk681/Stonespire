@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Adventure Game Title</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <style>
         body {
             margin: 0;
             padding: 0;
-            overflow-x: hidden; /* Empêche le défilement horizontal */
+            overflow-y: hidden; /* Empêche le défilement vertical */
         }
         #container {
             display: flex;
@@ -17,7 +16,9 @@
             align-items: center;
             padding: 20px;
             box-sizing: border-box;
-            min-height: 100vh; /* Hauteur minimale de la vue */
+            width: 100vw; /* 100% de la largeur de la fenêtre */
+            height: 100vh; /* 100% de la hauteur de la fenêtre */
+            overflow-x: hidden; /* Empêche le défilement horizontal */
         }
         #image-container,
         #story-content,
