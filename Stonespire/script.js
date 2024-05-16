@@ -137,7 +137,7 @@ choices: [
 const toggleMusicButton = document.getElementById('toggle-music');
 
 // Variable to track if the music is currently playing
-let musicPlaying = true;
+let musicPlaying = false;
 
 // Function to toggle music playback
 function toggleMusic() {
