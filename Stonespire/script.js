@@ -125,6 +125,12 @@ choices: [
       { text: "Vous les insultez", next: "mort" },
     ] 
   },
+const deathMusic = document.getElementById('death-music');
+if (segmentId === 'mort') {
+    deathMusic.play(); // Démarrer la lecture de la musique de mort
+} else {
+    deathMusic.pause(); // Mettre en pause la musique si ce n'est pas la page "mort"
+}
   mort: {
     content: `<img src="images/imagemort.jpg" alt="Description de l'image"><br><br>Vous êtes mort.`,
 choices: [
