@@ -42,7 +42,7 @@ const storyData = {
     ]
   },
   segmentAttenteChef: {
-    content: `<img src="images/imageattenteChef.jpg" alt="Description de l'image"><br><br>Vous attendez que le chef vous reçoive. Un des garde vous demande le mot de passe`,
+    content: `<img src="images/imageattentechef.jpg" alt="Description de l'image"><br><br>Vous attendez que le chef vous reçoive. Un des garde vous demande le mot de passe`,
     choices: [
       { text: "Vous dites Vae Victis", next: "segmentAudienceChef" },
       { text: "Vous dites Vade in pace", next: "mort" },
