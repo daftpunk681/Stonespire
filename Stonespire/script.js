@@ -133,6 +133,27 @@ choices: [
   }
 };
 
+// Get reference to the toggle music button
+const toggleMusicButton = document.getElementById('toggle-music');
+
+// Variable to track if the music is currently playing
+let musicPlaying = true;
+
+// Function to toggle music playback
+function toggleMusic() {
+  if (musicPlaying) {
+    backgroundMusic.pause(); // Pause the music
+  } else {
+    backgroundMusic.play(); // Play the music
+  }
+  musicPlaying = !musicPlaying; // Inverse the music playing state
+  // Change the button text to reflect the current state
+  toggleMusicButton.textContent = musicPlaying ? "Désactiver la musique" : "Activer la musique";
+}
+
+// Event listener for the toggle music button
+toggleMusicButton.addEventListener('click', toggleMusic);
+
 // Définissez la variable pour suivre si la musique est actuellement en lecture
 let musicPlaying = false;
 
