@@ -15,20 +15,20 @@ const storyData = {
     ]
   },
   segmentPaladin: {
-    content: `<img src="images/imagePaladin.jpg" alt="Description de l'image"><br><br>Vous êtes un humain paladin, il n'y a que les blaireaux qui jouent paladin. Vous vous sentez honteux.`,
+    content: `<img src="images/imagepaladin.jpg" alt="Description de l'image"><br><br>Vous êtes un humain paladin, il n'y a que les blaireaux qui jouent paladin. Vous vous sentez honteux.`,
     choices: [
       { text: "Continuer", next: "mort" },
     ]
   },
   segmentDarkvale: {
-    content: `<img src="images/imageDarkvale.jpg" alt="Description de l'image"><br><br>Des bandits vous abordent.`,
+    content: `<img src="images/imagedarkvale.jpg" alt="Description de l'image"><br><br>Des bandits vous abordent.`,
     choices: [
       { text: "Vous les attaquez", next: "mort" },
       { text: "Vous engagez la conversation", next: "segmentConversation" },
     ]
   },
   segmentConversation: {
-    content: `<img src="images/imageConversation.jpg" alt="Description de l'image"><br><br>Vous parlez avec ce groupe de bandit et remarquez un écusson que vous connaissez`,
+    content: `<img src="images/imageconversation.jpg" alt="Description de l'image"><br><br>Vous parlez avec ce groupe de bandit et remarquez un écusson que vous connaissez`,
     choices: [
       { text: "Vous tentez de les convaincre que vous êtes un voleur de la guilde de Darkholden", next: "segmentStonespireNord" },
       { text: "Vous les insultez, les membres de leur guilde sont responsables de pillage et de meurtres ", next: "mort" },
@@ -42,7 +42,7 @@ const storyData = {
     ]
   },
   segmentAttenteChef: {
-    content: `<img src="images/imageAttenteChef.jpg" alt="Description de l'image"><br><br>Vous attendez que le chef vous reçoive. Un des garde vous demande le mot de passe`,
+    content: `<img src="images/imageattenteChef.jpg" alt="Description de l'image"><br><br>Vous attendez que le chef vous reçoive. Un des garde vous demande le mot de passe`,
     choices: [
       { text: "Vous dites Vae Victis", next: "segmentAudienceChef" },
       { text: "Vous dites Vade in pace", next: "mort" },
@@ -56,77 +56,77 @@ const storyData = {
     ]
   },
   segmentBravo: {
-    content: `<img src="images/imageBravo.jpg" alt="Description de l'image"><br><br>Le chef de guilde vous reçoit et il vous propose de travailler pour lui`,
+    content: `<img src="images/imagebravo.jpg" alt="Description de l'image"><br><br>Le chef de guilde vous reçoit et il vous propose de travailler pour lui`,
 choices: [
       { text: "Vous acceptez", next: "segmentMission" },
       { text: "Vous refusez et tentez de l'attaquer", next: "mort" },
     ]
   },
 segmentMission: {
-    content: `<img src="images/imageMission.jpg" alt="Description de l'image"><br><br>Il vous demande de retrouver sa fille qui a disparu, il pense qu'on pourra vous renseigner à la taverne`,
+    content: `<img src="images/imagemission.jpg" alt="Description de l'image"><br><br>Il vous demande de retrouver sa fille qui a disparu, il pense qu'on pourra vous renseigner à la taverne`,
     choices: [
       { text: "Vous acceptez", next: "segmentTaverne" },
       { text: "Vous refusez finalement et l'attaquez", next: "segmentmort" },
     ]
   },	
   segmentDrownedWitch: {
-    content: `<img src="images/imageDrownedWitch.jpg" alt="Description de l'image"><br><br>Un noyeur gris vous attaque.`,
+    content: `<img src="images/imageDrownedwitch.jpg" alt="Description de l'image"><br><br>Un noyeur gris vous attaque.`,
     choices: [
       { text: "Vous fuyez la goule", next: "segmentFuite" },
       { text: "Vous attaquez la goule", next: "segmentAttaqueGoule" },
     ]
   },
   segmentFuite: {
-    content: `<img src="images/imageFuite.jpg" alt="Description de l'image"><br><br>Vous arrivez à Stonespire par la porte Sud. Qui n'est pas gardée`,
+    content: `<img src="images/imagefuite.jpg" alt="Description de l'image"><br><br>Vous arrivez à Stonespire par la porte Sud. Qui n'est pas gardée`,
 choices: [
       { text: "Vous décidez d'aller au marché pour y chercher votre compagnon", next: "segmentMarché" },
       { text: "Vous décidez d'aller à la taverne pour y chercher votre compagnon", next: "segmentTaverne" },
     ]
   },
 segmentMarché: {
-    content: `<img src="images/imageMarché.jpg" alt="Description de l'image"><br><br>Vous arrivez au marché de Stonespire`,
+    content: `<img src="images/imagemarché.jpg" alt="Description de l'image"><br><br>Vous arrivez au marché de Stonespire`,
 choices: [
       { text: "Vous interrogez un groupe de bandits qui arborent un écusson que vous pensez reconnaitre", next: "segmentConversation" },
       { text: "Vous  ne trouvez pas votre compagnon et décidez d'aller à la taverne pour y chercher votre compagnon", next: "segmentTaverne" },
     ]
   },
 segmentTaverne: {
-    content: `<img src="images/imageTaverne.jpg" alt="Description de l'image"><br><br>Vous arrivez à la taverne de Stonespire`,
+    content: `<img src="images/imagetaverne.jpg" alt="Description de l'image"><br><br>Vous arrivez à la taverne de Stonespire`,
 choices: [
       { text: "Vous commandez une bière en attendant la nuit", next: "segmentTaverneNuit" },
       { text: "Vous commandez une bière et entreprenez d'interroger des clients", next: "segmentBar" },
     ]
   },
   segmentAttaqueGoule: {
-    content: `<img src="images/imageAttaqueGoule.jpg" alt="Description de l'image"><br><br>Vous attaquez le noyeur.`,
+    content: `<img src="images/imageattaquegoule.jpg" alt="Description de l'image"><br><br>Vous attaquez le noyeur.`,
     choices: [
       { text: "Vous l'attaquez à mains nues", next: "mort" },
       { text: "Vous l'attaquez avec votre dague", next: "segmentAttaqueGouleDague" },
     ]
   },
   segmentAttaqueGouleDague: {
-    content: `<img src="images/imageAttaqueGouleDague.jpg" alt="Description de l'image"><br><br>Vous lui plantez votre dague.`,
+    content: `<img src="images/imageattaquegouledague.jpg" alt="Description de l'image"><br><br>Vous lui plantez votre dague.`,
     choices: [
       { text: "Dans le coeur", next: "segmentGoulemorte" },
       { text: "Dans le ventre", next: "mort" },
     ]
   },
 segmentGoulemorte: {
-    content: `<img src="images/imageGoulemorte.jpg" alt="Description de l'image"><br><br>La goule est morte et vous trouvez un papier et une fiole verte sur son corps`,
+    content: `<img src="images/imagegoulemorte.jpg" alt="Description de l'image"><br><br>La goule est morte et vous trouvez un papier et une fiole verte sur son corps`,
     choices: [
       { text: "Partir vers la ville avec le papier", next: "segmentPorteEst" },
       { text: "Boire la fiole", next: "mort" },
     ]
   },
   segmentPorteEst: {
-    content: `<img src="images/imagePorteEst.jpg" alt="Description de l'image"><br><br>Vous arrivez à Stonespire par la porte Est. Elle est lourdement gardée et les gardes zélés vous demandent un laissez-passer`,
+    content: `<img src="images/imageporteest.jpg" alt="Description de l'image"><br><br>Vous arrivez à Stonespire par la porte Est. Elle est lourdement gardée et les gardes zélés vous demandent un laissez-passer`,
 choices: [
       { text: "Vous leur tendez un papier trouvé sur la goule ", next: "segmentMarché" },
       { text: "Vous les insultez", next: "mort" },
     ] 
   },
   mort: {
-    content: `<img src="images/imageMort.jpg" alt="Description de l'image"><br><br>Vous êtes mort.`,
+    content: `<img src="images/imagemort.jpg" alt="Description de l'image"><br><br>Vous êtes mort.`,
 choices: [
       { text: "Retour", next: "intro" },
     ] 
