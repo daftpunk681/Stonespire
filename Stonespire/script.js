@@ -133,25 +133,25 @@ choices: [
   }
 };
 
-// Get reference to the toggle music button
+// Définissez la variable pour suivre si la musique est actuellement en lecture
+let musicPlaying = false;
+
+// Récupérer la référence du bouton de bascule de la musique
 const toggleMusicButton = document.getElementById('toggle-music');
+const backgroundMusic = document.getElementById('background-music');
 
-// Variable to track if the music is currently playing
-let musicPlaying = true;
-
-// Function to toggle music playback
+// Fonction pour basculer la lecture de la musique
 function toggleMusic() {
-  if (musicPlaying) {
-    backgroundMusic.pause(); // Pause the music
-  } else {
-    backgroundMusic.play(); // Play the music
-  }
-  musicPlaying = !musicPlaying; // Inverse the music playing state
-  // Change the button text to reflect the current state
-  toggleMusicButton.textContent = musicPlaying ? "Désactiver la musique" : "Activer la musique";
+    if (musicPlaying) {
+        backgroundMusic.pause(); // Met en pause la musique
+        musicPlaying = false;
+    } else {
+        backgroundMusic.play(); // Joue la musique
+        musicPlaying = true;
+    }
 }
 
-// Event listener for the toggle music button
+// Ajouter un écouteur d'événements pour le clic sur le bouton de bascule de la musique
 toggleMusicButton.addEventListener('click', toggleMusic);
 
 // Get references to the story content and choices containers
